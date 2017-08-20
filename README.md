@@ -26,7 +26,7 @@ The project can be compiled and run by using the following command:
 ## Project result
 Below is the result video of this project.
 
-<a href="https://youtu.be/xGXFW1g9OQ0" target="_blank"><img src="https://youtu.be/xGXFW1g9OQ0/0.jpg" 
+<a href="https://youtu.be/xGXFW1g9OQ0" target="_blank"><img src="http://img.youtube.com/vi/xGXFW1g9OQ0/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="400" height="300" border="10" /></a>
 
 ## Project explanation
