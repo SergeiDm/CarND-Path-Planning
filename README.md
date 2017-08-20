@@ -23,6 +23,8 @@ The project can be compiled and run by using the following command:
 2. Compile: `cmake .. && make`
 3. Run it: `./path_planning`
 
+The simulator which contains the Path Planning Project is [here](https://github.com/udacity/self-driving-car-sim/releases).
+
 ## Project result
 Below is the result video of this project.
 
@@ -30,4 +32,29 @@ Below is the result video of this project.
 alt="IMAGE ALT TEXT HERE" width="400" height="300" border="10" /></a>
 
 ## Project explanation
-### The Model
+The project should generate a trajectory which satisfies the following criteria:
+1. The car is able to drive at least 4.32 miles without incident.
+2. The car doesn't drive faster than the speed limit (50 mph). Also the car isn't driving much slower than speed limit unless obstructed by traffic.
+3. The car does not exceed a total acceleration of 10 m/s^2 and a jerk of 10 m/s^3.
+4. The car must not come into contact with any of the other cars on the road.
+5. The car doesn't spend more than a 3 second length out side the lane lanes during changing lanes, and every other time the car stays inside one of the 3 lanes on the right hand side of the road.
+6. The car is able to smoothly change lanes when it makes sense to do so, such as when behind a slower moving car and an adjacent lane is clear of other traffic.
+
+### Speed limit and acceleration (items 2, 3)
+The initial car velocity is 0. According to lines 371-379 of 'main.cpp' there is incremental velocity increasing if the current value is under 49.5 and there is no a slow moving car ahead. In case of a slower moving car, we decrease the speed.
+
+Lines 268-293 calculate if there is a car in front of us on the same lane and the distance less than 30m. For defining this, the sensor data    A slower moving car we  Obstacle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
