@@ -12,7 +12,6 @@ The project includes the following folder/files:
   - s - distance along the road to get to that waypoint in meters,
   - dx, dy - the unit normal vector pointing outward of the highway loop.
 - [CMakeLists.txt](https://github.com/SergeiDm/CarND-Path-Planning/blob/master/CMakeLists.txt) - the file for building program.
-- [illustrations]() - the folder with pictures for README.md.
 
 ## Dependencies
 All dependencies can be found [here](https://github.com/udacity/CarND-Path-Planning-Project).
