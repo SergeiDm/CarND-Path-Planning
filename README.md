@@ -6,7 +6,11 @@ The goal of this project is to design a path planner that is able to create smoo
 
 ## Project files
 The project includes the following folder/files:
-- [src](https://github.com/SergeiDm/CarND-Path-Planning/tree/master/src) - the folder with c++ files with Path planning.
+- [src](https://github.com/SergeiDm/CarND-Path-Planning/tree/master/src) - C++ files with Path planning implementation.
+- [data](https://github.com/SergeiDm/CarND-Path-Planning/blob/master/data/highway_map.csv) - list of waypoints [x,y,s,dx,dy]:
+  - x, y - the waypoint's map coordinate position,
+  - s - distance along the road to get to that waypoint in meters,
+  - dx, dy - the unit normal vector pointing outward of the highway loop.
 - [CMakeLists.txt](https://github.com/SergeiDm/CarND-Path-Planning/blob/master/CMakeLists.txt) - the file for building program.
 - [illustrations]() - the folder with pictures for README.md.
 
