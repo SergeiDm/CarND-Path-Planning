@@ -19,9 +19,9 @@ OS Windows 10 users may use [Bash on Ubuntu on Windows](https://msdn.microsoft.c
 
 ## Compiling and running the project
 The project can be compiled and run by using the following command:
-1. Make a build directory: mkdir build && cd build
-2. Compile: cmake .. && make
-3. Run it: ./path_planning.
+1. Make a build directory: `mkdir build && cd build`
+2. Compile: `cmake .. && make`
+3. Run it: `./path_planning`
 
 ## Project result
 Below is the result video of this project.
