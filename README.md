@@ -7,7 +7,7 @@ The goal of this project is to design a path planner that is able to create smoo
 ## Project files
 The project includes the following folder/files:
 - [src](https://github.com/SergeiDm/CarND-Path-Planning/tree/master/src) - C++ files with Path planning implementation.
-- [data](https://github.com/SergeiDm/CarND-Path-Planning/blob/master/data/highway_map.csv) - list of waypoints [x,y,s,dx,dy]:
+- [data](https://github.com/SergeiDm/CarND-Path-Planning/blob/master/data/highway_map.csv) - list of waypoints [x, y, s, dx, dy]:
   - x, y - the waypoint's map coordinate position,
   - s - distance along the road to get to that waypoint in meters,
   - dx, dy - the unit normal vector pointing outward of the highway loop.
@@ -44,7 +44,7 @@ The project should generate a trajectory which satisfies the following criteria:
 6. The car is able to smoothly change lanes when it makes sense to do so, such as when behind a slower moving car and an adjacent lane is clear of other traffic.
 
 ### Speed limit and acceleration
-The initial car velocity is 0 mph. Whe incrementally increase velocity (lines 371-379 of 'main.cpp') if the current value is under 49.5 mph and there is no a slow moving car ahead. It allows us to meet criterion about acceleration.
+The initial car velocity is 0 mph. We incrementally increase velocity (lines 371-379 of 'main.cpp') if the current value is under 49.5 mph and there is no a slow moving car ahead. It allows us to meet criterion about acceleration.
 
 In case of a slower moving car, we decrease the speed (lines 372-375).
 
