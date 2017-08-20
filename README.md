@@ -48,7 +48,7 @@ The initial car velocity is 0 mph. We incrementally increase velocity (lines 371
 
 In case of a slower moving car, we decrease the speed (lines 372-375).
 
-Lines 268-293 calculate if there is a car in front of us on the same lane and the distance is less than 30 m. For defining this, the sensor data are used:
+Lines 268-293 calculate if there is a car in front of us in the same lane and the distance is less than 30 m. For defining this, the sensor data are used:
 - ID - car's unique ID,
 - x, y - car's x and y positions in map coordinates,
 - vx, vy - car's x and y velocities in m/s,
@@ -63,7 +63,7 @@ Lines 297-306 define successor states from initial state of our car. For example
 - distance between our car and detected one,
 - detected car's speed.
 
-We loop over all possible successor states (lines 313-349) and calculate the same cost function (line 338-345), but if the distance (in term of s frenet coordinate) between our car and a car in next lane less than 5 m. we add a big number to the cost function (line 341), because collision is possible.
+We loop over all possible successor states (lines 313-349) and calculate the same cost function (line 338-345), but if the distance (in term of s frenet coordinate) between our car and a car in next lane less than 5 m. we add a big number to the cost function (line 341), because a collision is possible.
 
 After comparing all cost functions (lines 351-356), we define the lane with the smallest cost function. Maybe it occurs that the current lane is the best now.
 
