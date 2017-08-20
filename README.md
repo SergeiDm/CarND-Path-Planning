@@ -44,11 +44,35 @@ The project should generate a trajectory which satisfies the following criteria:
 5. The car doesn't spend more than a 3 second length out side the lane lanes during changing lanes, and every other time the car stays inside one of the 3 lanes on the right hand side of the road.
 6. The car is able to smoothly change lanes when it makes sense to do so, such as when behind a slower moving car and an adjacent lane is clear of other traffic.
 
-### Speed limit and acceleration (items 2, 3)
-The initial car velocity is 0. According to lines 371-379 of 'main.cpp' there is incremental velocity increasing if the current value is under 49.5 and there is no a slow moving car ahead. In case of a slower moving car, we decrease the speed.
+### Speed limit and acceleration
+The initial car velocity is 0 mph. Whe incrementally increase velocity (lines 371-379 of 'main.cpp') if the current value is under 49.5 mph and there is no a slow moving car ahead. It allows us to meet criterion about acceleration.
 
-Lines 268-293 calculate if there is a car in front of us on the same lane and the distance less than 30m. For defining this, the sensor data    A slower moving car we  Obstacle
+In case of a slower moving car, we decrease the speed (lines 372-375).
 
+Lines 268-293 calculate if there is a car in front of us on the same lane and the distance is less than 30 m. For defining this, the sensor data are used:
+- ID - car's unique ID,
+- x, y - car's x and y positions in map coordinates,
+- vx, vy - car's x and y velocities in m/s,
+- s - car's s position in frenet coordinates,
+- d - car's d position in frenet coordinates.
+Knowing our current lane, lane width (4 m.) and d values from sensor data, we can check if a car is in the same lane (line 276).
+
+### Lane changing - making decision
+In case of a slower moving car (lines 268-289), we should check possible lane changing. 
+
+Lines 297-306 define successor states from initial state of our car. For example, if the current state is middle lane, so the next states may be middle or left or right lanes. To calculate next state/ lane, we use cost function (line 311) which is inversely proportional to:
+- distance between our car and detected one,
+- detected car's speed.
+
+We loop over all possible successor states (lines 313-349) and calculate the same cost function (line 338-345), but if the distance (in term of s frenet coordinate) between our car and a car in next lane less than 5 m. we add a big number to the cost function (line 341), because collision is possible.
+
+After comparing all cost functions (lines 351-356), we define the lane with the smallest cost function. Maybe it occurs that the current lane is the best now.
+
+### Trajectory generation
+Trajectory shoud be smooth
+
+In this project for trajectory generation, the following approach was used:
+1. Generate 3 points 
 
 
 
